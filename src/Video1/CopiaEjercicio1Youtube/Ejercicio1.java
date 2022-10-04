@@ -1,4 +1,4 @@
-package CopiaEjercicio1Youtube;
+package Video1.CopiaEjercicio1Youtube;
 
 import java.util.Scanner;
 

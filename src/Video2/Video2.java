@@ -1,38 +1,23 @@
 package Video2;
-
+//Saber cual es el numero mayor de 5 numeros.
 import java.util.Scanner;
-
 public class Video2 {
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
-        System.out.print("Introduce un número entre 0 y 10:");
-        int n = input.nextInt();
-        int arrayNumeros[] = new int[n];
+        Scanner sc = new Scanner(System.in);
+        System.out.println("escribe 5 numeros");
 
-        for (int i = 0; i < n; i++) {
+        int numeros []=new int[5];
 
-            System.out.println("inserte un numero en la posicion: " + i);
+        int mayor=numeros[0];
+        for(int i = 0; i<numeros.length; i++) {
+            numeros[i] = sc.nextInt();
 
-            int num;
-
-            do{
-                num = input.nextInt();
-
-                if(!(num>=0 && num<=10)){
-                    System.out.println("ERRORRRR!!! El numero debe estar entre 0 y 10");
-                }
-
-            }while(!(num>=0 && num<=10));
-
-            arrayNumeros[i] = num;
-
+            if(mayor>numeros[i]){
+                mayor = numeros[i];
+            }
         }
+        System.out.println("el numero mayor es: " + mayor);
 
-        for (int i = 0; i<arrayNumeros.length; i++) {
-
-            System.out.println(arrayNumeros[i]);
-        }
     }
 }
-
