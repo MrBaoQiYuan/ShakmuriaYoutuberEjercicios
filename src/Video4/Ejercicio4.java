@@ -1,6 +1,8 @@
 package Video4;
-//Crear programa que nos pida capturar numeros positivos.
-//Calcular la media de esos numeros.
+//Crear un programa que se este pidiendo numeros enteros.
+//Cuando un cero se haya introducido, finalizará el programa.
+//sumar los numeros y mostrar la suma en pantalla.
+
 import java.util.Scanner;
 
 public class Ejercicio4 {
@@ -9,30 +11,21 @@ public class Ejercicio4 {
 
         Scanner input = new Scanner(System.in);
 
-        int contador=0;
+        int num;
         int suma=0;
-        int num=0;
-        double media=0;
 
-        System.out.println("introduce un numero mayor que cero. si quieres parar el ejercicio escribe 0");
+        System.out.println("introduce un numero entero diferente a cero para finalizar la suma total");
         num=input.nextInt();
 
-        while (num>0) {
+        while(num!=0){
+            System.out.println("introduce otro numero mas");
+            suma=suma+num;
+            num=input.nextInt();
 
-            suma = suma + num;
-            contador++;
-            System.out.println("Introduce un numero");
-            num = input.nextInt();
+        }if(num==0){
+            System.out.println("ejercicio finalizado");
         }
 
-            if(contador==0){
-                System.out.println("NUMERO MENOR QUE 0");
-
-            }else{
-                media=suma/contador;
-                System.out.println("la suma de todos los numeros es de: " + suma);
-                System.out.println("la media de los numeros introducidos es de: " + media);
-
-        }
+        System.out.println("la suma total es: " + suma);
     }
 }

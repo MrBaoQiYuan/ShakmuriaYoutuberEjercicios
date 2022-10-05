@@ -1,8 +1,8 @@
-package Video4;
+package Video5;
 
 import java.util.Scanner;
 
-public class EjercicioCopiado {
+public class Ejercicio5Copiado {
 
     public static void main(String[] args) {
         int num=0, suma=0, cantidadNumeros=0;
